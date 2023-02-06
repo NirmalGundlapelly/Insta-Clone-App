@@ -1,0 +1,23 @@
+
+################# Three Representation ###############
+
+
+
+
+LoginRoute
+    |
+    *
+    |
+    *
+ProtectedRoute
+    |
+    *
+SearchDetailsContext --* App.js, SearchComponent.js, HeaderComponent.js
+    |
+    *
+HomeRoute --* HeaderComponent, StoriesComponent, UserPostsComponent       -----
+                      |                                      |                       |______ LoaderComponent, FailureComponent, SomethingWentWrong 
+                      *                                      *                       |       
+                  MyProfile, SearchComponent          UserProfileComponent  -----  
+
+NotFoundRoute          

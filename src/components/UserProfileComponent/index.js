@@ -12,7 +12,7 @@ const dataFetchStatusConstants = {
   failure: 'FAILURE',
 }
 
-class UserProfileCoreComponent extends Component {
+class UserProfileComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -91,4 +91,4 @@ class UserProfileCoreComponent extends Component {
   }
 }
 
-export default withRouter(UserProfileCoreComponent)
+export default withRouter(UserProfileComponent)
