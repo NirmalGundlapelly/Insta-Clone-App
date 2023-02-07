@@ -51,7 +51,7 @@ class UsersPostsComponent extends Component {
     )
     console.log(response)
     const data = await response.json()
-
+    console.log(data)
     this.setState(prevState => ({
       postLikedStatus: false,
       postLikedCounts: prevState.postLikedCounts - 1,
@@ -75,17 +75,21 @@ class UsersPostsComponent extends Component {
           return (
             <li className="each-user-post-container">
               <div className="user-post-profile-container">
-                <div className="user-post-profile-image-container">
-                  <img
-                    src={userPost.profile_pic}
-                    alt="post author profile"
-                    className="user-post-profile-image"
-                  />
-                </div>
+                <Link to={`/users/${userPost.user_id}`}>
+                  <div className="user-post-profile-image-container scale-effect">
+                    <img
+                      src={userPost.profile_pic}
+                      alt="post author profile"
+                      className="user-post-profile-image"
+                      title="Profile Picture"
+                    />
+                  </div>
+                </Link>
                 <Link
-                  className="user-name-link-container"
+                  className="user-name-link-container scale-effect"
                   to={`/users/${userPost.user_id}`}
                   onClick={routingToUserProfile}
+                  title="User Name"
                 >
                   <p>{userPost.user_name}</p>
                 </Link>
@@ -100,27 +104,37 @@ class UsersPostsComponent extends Component {
               <div className="action-buttons-container">
                 {!postLikedStatus ? (
                   <button
-                    className="like-dis-comment-share-button"
+                    className="like-dis-comment-share-button scale-effect"
                     type="button"
                     onClick={this.likeCLicked}
-                    testid="likeIcon"
+                    title="Like"
+                    // testid="likeIcon"
                   >
                     <BsHeart />
                   </button>
                 ) : (
                   <button
-                    className="like-dis-comment-share-button"
+                    className="like-dis-comment-share-button scale-effect"
                     onClick={this.unlikeCLicked}
                     type="button"
-                    testid="unLikeIcon"
+                    title="Liked"
+                    // testid="unLikeIcon"
                   >
                     <FcLike />
                   </button>
                 )}
-                <button className="like-dis-comment-share-button" type="button">
+                <button
+                  className="like-dis-comment-share-button scale-effect"
+                  type="button"
+                  title="Comments"
+                >
                   <FaRegComment />
                 </button>
-                <button className="like-dis-comment-share-button" type="button">
+                <button
+                  className="like-dis-comment-share-button scale-effect"
+                  type="button"
+                  title="Share"
+                >
                   <BiShareAlt />
                 </button>
               </div>

@@ -99,3 +99,12 @@
     margin-bottom: 30px;
   }
 }
+
+.scale-effect {
+  transition: ease 0.5s;
+}
+
+.scale-effect:hover {
+  transform: translateY(-8px);
+  transition: ease 0.5s;
+}

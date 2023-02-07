@@ -174,3 +174,38 @@
     margin: 10px;
   }
 }
+
+.scale-effect {
+  transition: ease 0.5s;
+}
+
+.scale-effect:hover {
+  transform: translateY(-8px);
+  transition: ease 0.5s;
+  color: #4094ef;
+}
+
+.animation-letter {
+  transition: all 0.2s;
+  animation-name: letter-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-direction: alternate;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+@keyframes letter-animation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 30px;
+    top: 0px;
+    color: #4094ef;
+  }
+}

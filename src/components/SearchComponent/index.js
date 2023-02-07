@@ -87,7 +87,7 @@ const SearchComponent = () => (
                 <button
                   className="search-button-search-component"
                   type="button"
-                  testid="searchIcon"
+                  //   testid="searchIcon"
                   onClick={searchComponentStatusChange}
                 >
                   <FaSearch />
@@ -112,7 +112,7 @@ const SearchComponent = () => (
                 <button
                   className="search-button-search-component"
                   type="button"
-                  testid="searchIcon"
+                  //   testid="searchIcon"
                   onClick={searchComponentStatusChange}
                 >
                   <FaSearch />

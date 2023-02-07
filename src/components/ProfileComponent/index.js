@@ -20,7 +20,7 @@ const ProfileComponent = props => {
       </h1>
       <div className="profile-container">
         <img
-          className="profile-image"
+          className="profile-image scale-effect"
           src={userProfileData.profile_pic}
           alt={altValueProfilePic}
         />
@@ -79,7 +79,7 @@ const ProfileComponent = props => {
         {userProfileData.stories.map(each => (
           <li key={each.id}>
             <img
-              className="profile-story-image"
+              className="profile-story-image scale-effect"
               src={each.image}
               alt={altValueStory}
             />
@@ -102,7 +102,7 @@ const ProfileComponent = props => {
           {userProfileData.posts.map(each => (
             <li key={each.id}>
               <img
-                className="post-image-profile"
+                className="post-image-profile scale-effect"
                 src={each.image}
                 alt={altValuePost}
               />

@@ -75,7 +75,8 @@ const HeaderComponent = props => {
                       src="https://res.cloudinary.com/duzcy6kuh/image/upload/v1675260950/Instagram%20Clone%20Images/Standard_Collection_8_s3fze0.png"
                       alt="website logo"
                     />
-                    <h1 className="header-title">Insta Share</h1>
+                    <h1 className="header-title">Insta Shar</h1>
+                    <span className="animation-letter">e</span>
                   </div>
                 </Link>
 
@@ -91,7 +92,6 @@ const HeaderComponent = props => {
                     <button
                       className="search-button-header-large"
                       type="button"
-                      testid="searchIcon"
                       onClick={searchComponentStatusChange}
                     >
                       <FaSearch />
@@ -104,7 +104,7 @@ const HeaderComponent = props => {
                       className="options-header-large"
                     >
                       <p
-                        className={`option-header-text-large ${
+                        className={`option-header-text-large scale-effect ${
                           path === '/' && showSearchComponent === false
                             ? selectedPart
                             : null
@@ -121,7 +121,7 @@ const HeaderComponent = props => {
                       className="options-header-large"
                     >
                       <p
-                        className={`option-header-text-large ${
+                        className={`option-header-text-large scale-effect ${
                           path === '/my-profile' &&
                           showSearchComponent === false
                             ? selectedPart
@@ -158,7 +158,7 @@ const HeaderComponent = props => {
                     <Link
                       to="/"
                       onClick={routingToHomeOrProfile}
-                      className="each-option-under-hamburger"
+                      className="each-option-under-hamburger scale-effect"
                     >
                       <p
                         className={
@@ -175,7 +175,7 @@ const HeaderComponent = props => {
                     <button
                       type="button"
                       onClick={openSearchComponentSmall}
-                      className={`hamburger-search-button ${
+                      className={`hamburger-search-button scale-effect ${
                         showSearchComponent ? selectedPart : null
                       } `}
                     >
@@ -186,7 +186,7 @@ const HeaderComponent = props => {
                     <Link
                       to="/my-profile"
                       onClick={routingToHomeOrProfile}
-                      className="each-option-under-hamburger"
+                      className="each-option-under-hamburger scale-effect"
                     >
                       <p
                         className={
@@ -204,7 +204,7 @@ const HeaderComponent = props => {
                     <button
                       type="button"
                       onClick={logout}
-                      className="hamburger-logout-option"
+                      className="hamburger-logout-option scale-effect"
                     >
                       Logout
                     </button>
